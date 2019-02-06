@@ -1,17 +1,18 @@
-{% extends 'rango/base.html' %}
+<!DOCTYPE html>
+<!DOCTYPE html>
+
 {% load staticfiles %}
 
-{% block title_block %}
-{% endblock %}
+<html>
 
-{% block body_block %}
-		<h1>This is the about page</h1>
-		<div>
-			about about where about<br/>
-			<strong>{{ welcomemessage}}</strong><br/>
-		</div>
-		<div>
-			<a href={{linkURL}}>{{textURL}}</a><br/>
-			<img src="{% static "images/notnow.jpg" %}" alt="you IRL" />
-		</div>
-{% endblock %}
+    <head>
+        <title>Rando</title>
+    </head>
+
+    <body>
+        <h1>About</h1>
+        <p>{{ about_message }}</p><br />
+        <a href="/rango/">Back</a><br />
+        <img src="{{ MEDIA_URL}}cat.jpg" />
+    </body>
+</html>
